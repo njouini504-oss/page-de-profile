@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>EduSpace - Mon profil</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar" id="topBar">
+    <div class="profile-left">
+        <div class="avatar-top" id="topAvatar">👤</div>
+        <span class="user-name-top" id="topUserName">user</span>
+    </div>
+    <div class="nav-actions">
+        <button class="nav-btn" id="homeBtn"><i class="fas fa-home"></i> <span>Accueil</span></button>
+        <button class="nav-btn" id="settingsBtn"><i class="fas fa-sliders-h"></i> <span>Paramètres</span></button>
+    </div>
+</div>
+
+<!-- PANEL PARAMÈTRES -->
+<div id="settingsPanel" class="settings-panel hidden">
+    <h4><i class="fas fa-palette"></i> Personnaliser</h4>
+    <div class="setting-item">
+        <label><i class="fas fa-fill-drip"></i> Couleur barre supérieure</label>
+        <input type="color" id="topbarColorPicker" value="#2c3e66">
+    </div>
+    <div class="setting-item">
+        <label><i class="fas fa-moon"></i> Mode sombre</label>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+</div>
+
+<!-- TOAST NOTIFICATIONS -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- CONTENU PRINCIPAL -->
+<div class="container-main">
+    <div class="main-card">
+        <h1>EduSpace</h1>
+        <div class="sub">Modifier mon profil · Mettez à jour vos informations personnelles</div>
+
+        <!-- Bloc utilisateur -->
+        <div class="info-user-block">
+            <div class="user-summary">
+                <div class="avatar-large" id="mainAvatar">👤</div>
+                <div class="user-details">
+                    <h3 id="displayFullName">Jean Dupont</h3>
+                    <p id="displayUserEmail">jean.dupont@gmail.com</p>
+                    <span id="displayUserClass" style="background:#e9ecef; padding:3px 10px; border-radius:40px; font-size:0.8rem;">Classe: esiClasse</span>
+                </div>
+            </div>
+            <button class="btn-outline" id="changePhotoBtn"><i class="fas fa-camera"></i> Changer la photo</button>
+        </div>
+
+        <!-- Formulaire -->
+        <div class="form-row">
+            <div class="form-group">
+                <label>Prénom</label>
+                <input type="text" id="firstNameInput" placeholder="Votre prénom">
+            </div>
+            <div class="form-group">
+                <label>Nom</label>
+                <input type="text" id="lastNameInput" placeholder="Votre nom">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="emailInput" placeholder="Votre email">
+            </div>
+            <div class="form-group">
+                <label>Classe</label>
+                <div class="class-with-button">
+                    <input type="text" id="classInput" placeholder="Classe">
+                    <button class="btn-small-class" id="inlineChangeClassBtn">Changer ma classe</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sécurité -->
+        <div class="security-area">
+            <div class="security-title"><i class="fas fa-shield-alt"></i> SÉCURITÉ</div>
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label>Ancien mot de passe <span style="color:#e53e3e;">*</span></label>
+                <input type="password" id="oldPassword" placeholder="Entrez votre mot de passe actuel" autocomplete="current-password">
+            </div>
+            <div class="form-group">
+                <label>Nouveau mot de passe</label>
+                <input type="password" id="newPassword" placeholder="Entrez un nouveau mot de passe" autocomplete="new-password">
+                <div class="password-strength">
+                    <span class="strength-text" id="strengthText">Force</span>
+                    <div class="strength-meter"><div class="strength-fill" id="strengthFill"></div></div>
+                </div>
+                <div class="password-hint">Utilisez des lettres, chiffres et caractères spéciaux pour plus de sécurité.</div>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="form-actions">
+            <button class="btn-validate" id="validateBtn"><i class="fas fa-check-circle"></i> Valider les modifications</button>
+            <button class="btn-reset" id="resetBtn"><i class="fas fa-undo-alt"></i> Annuler les changements</button>
+        </div>
+
+        <!-- Footer -->
+        <div class="welcome-footer">
+            <span id="welcomeMessage">Bienvenue, Jean Dupont — votre classe esiClasse</span>
+            <button class="btn-class" id="footerChangeClassBtn">Changer ma classe</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js">
+</script>
+</body>
+</html>
