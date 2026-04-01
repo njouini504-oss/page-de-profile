@@ -1,0 +1,661 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f5f9ff;
+    color: #1a2c3e;
+    line-height: 1.5;
+}
+
+/* TOP BAR */
+.top-bar {
+    background: #1e2f5e;
+    padding: 12px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.brand-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-icon {
+    font-size: 1.6rem;
+}
+
+.brand-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.55rem;
+    background: linear-gradient(135deg, #fff, #e0e7ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 28px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffb347;
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    background: white;
+    border-radius: 32px;
+    padding: 48px;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+    margin-bottom: 60px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    color: #1e2f5e;
+    margin-bottom: 16px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #4a5b79;
+    margin-bottom: 24px;
+}
+
+.btn-hero {
+    background: #ffb347;
+    color: #1e2f5e;
+    padding: 12px 32px;
+    border-radius: 60px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.2s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.btn-hero:hover {
+    background: #ff9f1a;
+    transform: translateY(-2px);
+}
+
+.hero-img {
+    max-width: 300px;
+    border-radius: 24px;
+}
+
+/* FEATURES */
+.features {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.features h2 {
+    font-size: 1.8rem;
+    color: #1e2f5e;
+    margin-bottom: 16px;
+}
+
+.feature-desc {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #5e6f8d;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border-radius: 28px;
+    padding: 28px;
+    width: 320px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: 0.2s;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #1e2f5e;
+    margin-bottom: 12px;
+}
+
+.card hr {
+    margin: 12px 0;
+    border-color: #eef2ff;
+}
+
+.card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.card li {
+    margin-bottom: 10px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.card li::before {
+    content: "✓";
+    color: #ffb347;
+    position: absolute;
+    left: 0;
+}
+
+.card-btn {
+    display: inline-block;
+    background: #1e2f5e;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+    margin-top: 8px;
+}
+
+.card-btn:hover {
+    background: #ffb347;
+    color: #1e2f5e;
+}
+
+/* HOW IT WORKS */
+.how-it-works {
+    background: white;
+    border-radius: 32px;
+    padding: 40px 32px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.how-it-works h2 {
+    font-size: 1.8rem;
+    color: #1e2f5e;
+    margin-bottom: 24px;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    font-weight: 500;
+}
+
+.steps span {
+    background: #fef7e8;
+    padding: 12px 24px;
+    border-radius: 60px;
+    font-size: 1rem;
+    color: #1e2f5e;
+}
+
+/* FOOTER */
+footer {
+    background: #1e2f5e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* FORMULAIRE COMMUN (connexion, inscription) */
+.form-container {
+    max-width: 480px;
+    margin: 60px auto;
+    background: white;
+    border-radius: 32px;
+    padding: 40px;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+}
+
+.form-container h2 {
+    font-size: 1.8rem;
+    color: #1e2f5e;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e2e9f2;
+    border-radius: 24px;
+    font-size: 1rem;
+    background: white;
+    outline: none;
+    transition: 0.2s;
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    border-color: #ffb347;
+    box-shadow: 0 0 0 3px rgba(255,180,71,0.2);
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 5px;
+    color: #8a9bb0;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label,
+.input-box select:focus + label,
+.input-box select:not([value=""]) + label {
+    top: -8px;
+    font-size: 12px;
+    color: #ffb347;
+}
+
+.input-group {
+    margin-bottom: 24px;
+}
+
+.input-group span {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+    color: #1e2f5e;
+}
+
+.radio-group label {
+    margin-right: 20px;
+    cursor: pointer;
+    color: #0f1724;
+}
+
+.btn-submit {
+    width: 100%;
+    background: #ffb347;
+    color: #1e2f5e;
+    padding: 14px;
+    border: none;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 8px;
+}
+
+.btn-submit:hover {
+    background: #ff9f1a;
+    transform: translateY(-2px);
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #0f1724;
+}
+
+.form-footer a {
+    color: #ffb347;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.erreur {
+    color: #e53e3e;
+    font-size: 0.8rem;
+    margin-top: -10px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 12px 20px;
+    }
+    .nav-links a {
+        margin-left: 16px;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px;
+    }
+    .hero-img {
+        max-width: 200px;
+    }
+    .steps span {
+        font-size: 0.9rem;
+    }
+    .form-container {
+        margin: 40px 20px;
+        padding: 32px;
+    }
+}
+/* SETTINGS PANEL */
+.settings-icon {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: white;
+    margin-left: 20px;
+    transition: 0.2s;
+}
+.settings-icon:hover {
+    color: #ffb347;
+    transform: scale(1.05);
+}
+
+.settings-panel {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+    padding: 20px;
+    width: 260px;
+    z-index: 1000;
+    border: 1px solid #eef2f8;
+}
+
+.settings-panel h4 {
+    margin-bottom: 16px;
+    font-size: 1rem;
+    border-left: 4px solid #ffb347;
+    padding-left: 12px;
+    color: #1e2f5e;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.setting-item label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1e2f5e;
+}
+
+#topbarColorPicker {
+    width: 48px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Dark mode support */
+body.dark-mode .settings-panel {
+    background: #1e293b;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+body.dark-mode .settings-panel h4,
+body.dark-mode .setting-item label {
+    color: #f1f5f9;
+}
+/* ========== BOUTON PARAMÈTRES ========== */
+.settings-icon {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: white;
+    transition: 0.2s;
+    margin-left: 8px;
+}
+.settings-icon:hover {
+    color: #ffb347;
+    transform: scale(1.05);
+}
+
+/* ========== PANEL PARAMÈTRES ========== */
+.settings-panel {
+    position: fixed;
+    top: 70px;
+    right: 32px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+    padding: 20px;
+    width: 260px;
+    z-index: 1000;
+    border: 1px solid #eef2f8;
+}
+.settings-panel h4 {
+    margin-bottom: 16px;
+    font-size: 1rem;
+    border-left: 4px solid #ffb347;
+    padding-left: 12px;
+    color: #1e2f5e;
+}
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.setting-item label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1e2f5e;
+}
+#topbarColorPicker {
+    width: 48px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #ffb347;
+}
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+.hidden {
+    display: none;
+}
+
+/* ========== MODE SOMBRE ========== */
+body.dark-mode {
+    background-color: #0f1724;
+    color: #eef2ff;
+}
+body.dark-mode .top-bar {
+    background-color: #0f1724;
+}
+body.dark-mode .hero,
+body.dark-mode .card,
+body.dark-mode .how-it-works {
+    background-color: #192132;
+    color: #eef2ff;
+}
+body.dark-mode .hero-content h2,
+body.dark-mode .features h2,
+body.dark-mode .how-it-works h2 {
+    color: #ffb347;
+}
+body.dark-mode .hero-content p,
+body.dark-mode .feature-desc {
+    color: #cbd5e6;
+}
+body.dark-mode .card {
+    background-color: #1e293b;
+}
+body.dark-mode .card h3 {
+    color: #ffb347;
+}
+body.dark-mode .steps span {
+    background-color: #0f172a;
+    color: #ffb347;
+}
+body.dark-mode .settings-panel {
+    background: #1e293b;
+    border-color: #334155;
+}
+body.dark-mode .settings-panel h4,
+body.dark-mode .setting-item label {
+    color: #f1f5f9;
+}
+body.dark-mode .feature-image img {
+    filter: brightness(0.8);
+}
+
+/* ========== STYLES POUR LES IMAGES AJOUTÉES ========== */
+.hero-img {
+    max-width: 300px;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.feature-image {
+    text-align: center;
+    margin-top: 40px;
+}
+.feature-image img {
+    max-width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* Ajustement des cartes pour qu'elles restent lisibles sur l'image */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Mode sombre : adapter l'overlay */
+body.dark-mode .features::before {
+    background: rgba(0, 0, 0, 0.7);
+}
+body.dark-mode .card {
+    background: rgba(30, 41, 59, 0.95);
+}
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 0;
+    color: #aaa;               /* couleur discrète */
+    transition: color 0.2s;
+    z-index: 2;
+}
+
+.toggle-password:hover {
+    color: #ffb347;            /* orange au survol */
+}
+
+/* Mode sombre */
+body.dark-mode .toggle-password {
+    color: #7c8ba0;
+}
+
+body.dark-mode .toggle-password:hover {
+    color: #ffb347;
+}

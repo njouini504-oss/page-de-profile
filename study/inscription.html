@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription · StudyHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="brand-area">
+        <span class="brand-icon">🎓</span>
+        <span class="brand-name">StudyHub</span>
+    </div>
+    <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="connexion.html">Connexion</a>
+        <a href="inscription.html" class="active">Inscription</a>
+        <button id="settingsBtn" class="settings-icon"><i class="fas fa-sliders-h"></i></button>
+    </nav>
+</header>
+<div id="settingsPanel" class="settings-panel hidden">
+    <h4><span class="emoji-icon">🎨</span> Personnaliser</h4>
+    <div class="setting-item">
+        <label><span class="emoji-icon">🎨</span> Couleur barre supérieure</label>
+        <input type="color" id="topbarColorPicker" value="#1e2f5e">
+    </div>
+    <div class="setting-item">
+        <label><span class="emoji-icon">🌙</span> Mode sombre</label>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+</div>
+</div>
+
+<div class="form-container">
+    <h2>Créer un compte</h2>
+    <form id="registerForm">
+        <div class="input-box">
+            <input type="text" id="nom" placeholder=" " required>
+            <label>Nom complet</label>
+        </div>
+        <span id="ernom" class="erreur"></span>
+
+        <div class="input-box">
+            <input type="email" id="email" placeholder=" " required>
+            <label>Email</label>
+        </div>
+        <span id="eremail" class="erreur"></span>
+
+        <div class="input-box">
+            <input type="text" id="id" placeholder=" " required>
+            <label>Identifiant</label>
+        </div>
+        <span id="erid" class="erreur"></span>
+
+        <div class="input-group">
+            <span>Filière :</span>
+            <select id="filiere">
+                <option value="">Choisir une filière</option>
+                <option>LISI</option>
+                <option>IOT</option>
+                <option>RS</option>
+                <option>LT</option>
+            </select>
+        </div>
+        <span id="erfil" class="erreur"></span>
+
+        <div class="input-group">
+            <span>Classe :</span>
+            <div class="radio-group">
+                <label><input type="radio" name="classe" value="1"> 1ère</label>
+                <label><input type="radio" name="classe" value="2"> 2ème</label>
+                <label><input type="radio" name="classe" value="3"> 3ème</label>
+            </div>
+        </div>
+        <span id="erclasse" class="erreur"></span>
+
+        <!-- Champ Mot de passe -->
+<div class="input-box password-wrapper">
+    <input type="password" id="password" placeholder=" " required>
+    <label>Mot de passe</label>
+    <button type="button" class="toggle-password" data-target="password">
+        <i class="fas fa-eye"></i>
+    </button>
+</div>
+<span id="ermdp" class="erreur"></span>
+
+<!-- Champ Confirmer -->
+<div class="input-box password-wrapper">
+    <input type="password" id="confirm" placeholder=" " required>
+    <label>Confirmer mot de passe</label>
+    <button type="button" class="toggle-password" data-target="confirm">
+        <i class="fas fa-eye"></i>
+    </button>
+</div>
+<span id="ercmdp" class="erreur"></span>
+
+        <button type="submit" class="btn-submit">S'inscrire</button>
+        <div class="form-footer">
+            Déjà un compte ? <a href="connexion.html">Se connecter</a>
+        </div>
+    </form>
+</div>
+
+<script src="insc.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>

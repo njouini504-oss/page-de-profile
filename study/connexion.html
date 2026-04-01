@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion · StudyHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="brand-area">
+        <span class="brand-icon">🎓</span>
+        <span class="brand-name">StudyHub</span>
+    </div>
+    <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="connexion.html" class="active">Connexion</a>
+        <a href="inscription.html">Inscription</a>
+        <button id="settingsBtn" class="settings-icon"><i class="fas fa-sliders-h"></i></button>
+    </nav>
+</header>
+<div id="settingsPanel" class="settings-panel hidden">
+    <h4><span class="emoji-icon">🎨</span> Personnaliser</h4>
+    <div class="setting-item">
+        <label><span class="emoji-icon">🎨</span> Couleur barre supérieure</label>
+        <input type="color" id="topbarColorPicker" value="#1e2f5e">
+    </div>
+    <div class="setting-item">
+        <label><span class="emoji-icon">🌙</span> Mode sombre</label>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+</div>
+</div>
+
+<div class="form-container">
+    <h2>Se connecter</h2>
+    <form id="loginForm">
+        <div class="input-box">
+            <input type="email" id="email" placeholder=" " required>
+            <label>Email</label>
+        </div>
+        <div class="input-box password-wrapper">
+    <input type="password" id="password" placeholder=" " required>
+    <label>Mot de passe</label>
+    <button type="button" class="toggle-password" data-target="password">
+        <i class="fas fa-eye"></i>
+    </button>
+</div>
+        <span id="erreur" class="erreur"></span>
+        <button type="submit" class="btn-submit">Connexion</button>
+        <div class="form-footer">
+            Pas de compte ? <a href="inscription.html">S'inscrire</a>
+        </div>
+    </form>
+</div>
+
+<script src="conn.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>

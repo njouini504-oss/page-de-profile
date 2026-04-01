@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHub · Partage académique</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="brand-area">
+        <span class="brand-icon">🎓</span>
+        <span class="brand-name">StudyHub</span>
+    </div>
+    <nav class="nav-links">
+    <a href="index.html" class="active">Accueil</a>
+    <a href="connexion.html">Connexion</a>
+    <a href="inscription.html">Inscription</a>
+    <button id="settingsBtn" class="settings-icon"><i class="fas fa-sliders-h"></i></button>
+</nav>
+
+</header>
+<!-- Panneau paramètres (caché au départ) -->
+<div id="settingsPanel" class="settings-panel hidden">
+    <h4><span class="emoji-icon">🎨</span> Personnaliser</h4>
+    <div class="setting-item">
+        <label><span class="emoji-icon">🎨</span> Couleur barre supérieure</label>
+        <input type="color" id="topbarColorPicker" value="#1e2f5e">
+    </div>
+    <div class="setting-item">
+        <label><span class="emoji-icon">🌙</span> Mode sombre</label>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+</div>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Plateforme de partage académique</h2>
+            <p>pour étudiants · Accédez facilement aux anciens examens, TD, TP et partagez vos documents selon votre filière.</p>
+            <a href="inscription.html" class="btn-hero">S'inscrire</a>
+        </div>
+        <img src="istic logo.jpg" alt="Illustration" class="hero-img">
+    </section>
+
+    <section class="features">
+    <h2>Fonctionnalités</h2>
+    <p class="feature-desc">Afin de vous éviter d’éparpiller vos tâches pédagogiques sur des supports différents, StudyHub vous offre des outils groupés sur une seule plateforme avec un espace d’hébergement contrôlé.</p>
+    <div class="cards">
+        <div class="card">
+            <h3>👨‍🎓 Étudiant</h3>
+            <hr>
+            <ul>
+                <li>S’inscrire et se connecter</li>
+                <li>Télécharger des documents</li>
+                <li>Partager des documents</li>
+                <li>Commenter les documents</li>
+            </ul>
+            <a href="connexion.html" class="card-btn">Connexion</a>
+        </div>
+        <div class="card">
+            <h3>🛡️ Administrateur</h3>
+            <hr>
+            <ul>
+                <li>Gérer les utilisateurs</li>
+                <li>Supprimer documents</li>
+                <li>Gérer : filières, semestres, matières</li>
+                <li>Modérer les commentaires</li>
+            </ul>
+            <a href="connexion.html" class="card-btn">Connexion</a>
+        </div>
+    </div>
+</section>
+
+    <section class="how-it-works">
+        <h2>Comment ça marche ?</h2>
+        <div class="steps">
+            <span>📝 Créer un compte</span>
+            <span>🎓 Choisir sa filière</span>
+            <span>📚 Accéder aux matières</span>
+            <span>📤 Télécharger ou partager des documents</span>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 StudyHub | Projet étudiant</p>
+</footer>
+<script src="theme.js"></script>
+</body>
+</html>
